@@ -1,6 +1,6 @@
 class Numeric
   def to_w
-    return "Comming Soon.." unless self.is_a?(Integer)
+    return "Comming Soon." unless self.is_a?(Integer)
     num = self
     case num
     when 1
