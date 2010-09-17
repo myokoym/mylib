@@ -57,6 +57,10 @@ describe NumUtils do
     NumUtils.num_to_word(99000).should == "ninety-nine thousand"
   end
 
+  it "10000000 to one milion" do
+    NumUtils.num_to_word(10000000).should == "one milion"
+  end
+
   it "Sum of 1-1000 chars." do
     sum = 0
     1.upto(1000) do |i|
