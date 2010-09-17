@@ -57,16 +57,16 @@ describe Numeric,"#to_w example. " do
     99000.to_w.should == "ninety-nine thousand"
   end
 
-  it "10000000 to one million" do
-    10000000.to_w.should == "one million"
+  it "1000000 to one million" do
+    1000000.to_w.should == "one million"
   end
 
-  it "60000000000 to six billion" do
-    60000000000.to_w.should == "six billion"
+  it "6000000000 to six billion" do
+    6000000000.to_w.should == "six billion"
   end
 
-  it "70000000000000 to seven trillion" do
-    70000000000000.to_w.should == "seven trillion"
+  it "723456789012345 to seven hundred and twenty-three trillion and four hundred and fifty-six billion and seven hundred and eighty-nine million and twelve thousand and three hundred and forty-five" do
+    723456789012345.to_w.should == "seven hundred and twenty-three trillion and four hundred and fifty-six billion and seven hundred and eighty-nine million and twelve thousand and three hundred and forty-five"
   end
 
   it "1.3 to Comming Soon." do

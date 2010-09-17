@@ -69,7 +69,7 @@ class Numeric
       else
         front_num.to_w + " hundred and " + rear_num.to_w
       end
-    when 1000 .. 9999999
+    when 1e3 .. 999999
       front_num = num / 1000
       rear_num = num % 1000
       if rear_num == 0
@@ -77,25 +77,25 @@ class Numeric
       else
         front_num.to_w + " thousand and " + rear_num.to_w
       end
-    when 10000000 .. 99999999
-      front_num = num / 10000000
-      rear_num = num % 10000000
+    when 1e6 .. 999999999
+      front_num = num / 1000000
+      rear_num = num % 1000000
       if rear_num == 0
         front_num.to_w + " million"
       else
         front_num.to_w + " million and " + rear_num.to_w
       end
-    when 10000000000 .. 99999999999
-      front_num = num / 10000000000
-      rear_num = num % 10000000000
+    when 1e9 .. 999999999999
+      front_num = num / 1000000000
+      rear_num = num % 1000000000
       if rear_num == 0
         front_num.to_w + " billion"
       else
         front_num.to_w + " billion and " + rear_num.to_w
       end
-    when 10000000000000 .. 99999999999999
-      front_num = num / 10000000000000
-      rear_num = num % 10000000000000
+    when 1e12 .. 999999999999999
+      front_num = num / 1000000000000
+      rear_num = num % 1000000000000
       if rear_num == 0
         front_num.to_w + " trillion"
       else
