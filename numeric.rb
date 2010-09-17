@@ -1,6 +1,6 @@
 class Numeric
   def to_w
-    return "Comming Soon." unless self.is_a?(Integer)
+    return "Comming Soon.." unless self.is_a?(Integer)
     num = self
     case num
     when 1
@@ -70,23 +70,24 @@ class Numeric
         x_hundred.to_w + " hundred and " + x_ten.to_w
       end
     when 1000 .. 9999999
-      cut_unit(num, "thousand")
+      x_thousand = num / 1000
+      x_hundred = num % 1000
+      if x_hundred == 0
+        x_thousand.to_w + " thousand"
+      else
+        x_thousand.to_w + " thousand and " + x_hundred.to_w
+      end
     when 10000000 .. 99999999
-      cut_unit(num, "milion")
+      x_milion = num / 10000000
+      x_thousand = num % 10000000
+      if x_thousand == 0
+        x_milion.to_w + " milion"
+      else
+        x_milion.to_w + " milion and " + x_thousand.to_w
+      end
     else
       "charactor"
     end
   end
-        
-  private cut_unit(num, unit)
-    front_num = num / 10000000
-    rear_num = num % 10000000
-    if rear_num == 0
-      front_num.to_w + " #{unit}"
-    else
-      front_num.to_w + " #{unit} and " + rear_num.to_w
-    end
-  end
 end
-
 
