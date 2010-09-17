@@ -62,28 +62,44 @@ class Numeric
       x_ten = num - x_one
       x_ten.to_w + "-" + x_one.to_w
     when 100 .. 999
-      x_hundred = num / 100
-      x_ten = num % 100
-      if x_ten == 0
-        x_hundred.to_w + " hundred"
+      front_num = num / 100
+      rear_num = num % 100
+      if rear_num == 0
+        front_num.to_w + " hundred"
       else
-        x_hundred.to_w + " hundred and " + x_ten.to_w
+        front_num.to_w + " hundred and " + rear_num.to_w
       end
     when 1000 .. 9999999
-      x_thousand = num / 1000
-      x_hundred = num % 1000
-      if x_hundred == 0
-        x_thousand.to_w + " thousand"
+      front_num = num / 1000
+      rear_num = num % 1000
+      if rear_num == 0
+        front_num.to_w + " thousand"
       else
-        x_thousand.to_w + " thousand and " + x_hundred.to_w
+        front_num.to_w + " thousand and " + rear_num.to_w
       end
     when 10000000 .. 99999999
-      x_milion = num / 10000000
-      x_thousand = num % 10000000
-      if x_thousand == 0
-        x_milion.to_w + " milion"
+      front_num = num / 10000000
+      rear_num = num % 10000000
+      if rear_num == 0
+        front_num.to_w + " million"
       else
-        x_milion.to_w + " milion and " + x_thousand.to_w
+        front_num.to_w + " million and " + rear_num.to_w
+      end
+    when 10000000000 .. 99999999999
+      front_num = num / 10000000000
+      rear_num = num % 10000000000
+      if rear_num == 0
+        front_num.to_w + " billion"
+      else
+        front_num.to_w + " billion and " + rear_num.to_w
+      end
+    when 10000000000000 .. 99999999999999
+      front_num = num / 10000000000000
+      rear_num = num % 10000000000000
+      if rear_num == 0
+        front_num.to_w + " trillion"
+      else
+        front_num.to_w + " trillion and " + rear_num.to_w
       end
     else
       "charactor"
