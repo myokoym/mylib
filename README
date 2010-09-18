@@ -1,8 +1,22 @@
-* What's a Library
+* What's a Library?
 
-Numeric to Words.
+    This is my library for Ruby.
+    
+    "require 'mylib'" then required to all libraries.
 
-require 'numeric' or 'mylib', added Numeric#to_w.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-range(now): 1-999,999,999,999,999(999 trillion).
+  ~ numeric.rb
+
+      "require 'numeric'" is required to these libraries.
+
+
+    + Numeric#to_en
+
+        Numeric to English.
+
+        range(now): 1-999,999,999,999,999(Integer only).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
